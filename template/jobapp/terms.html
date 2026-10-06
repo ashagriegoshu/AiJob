@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block meta_title %}Terms of Service — DJobPortal{% endblock %}
+{% block meta_description %}Read the terms and conditions for using DJobPortal.{% endblock %}
+
+{% block content %}
+<section class="site-section py-5">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-md-10">
+        <h1 class="mb-4">Terms of Service</h1>
+        <p class="text-muted">Last updated: {% now "F j, Y" %}</p>
+
+        <p>By using DJobPortal, you agree to these terms. If you don't agree, please don't use the site.</p>
+
+        <h2 class="h4 mt-4">1. Accounts</h2>
+        <p>You are responsible for maintaining the confidentiality of your account and password. You must provide accurate information.</p>
+
+        <h2 class="h4 mt-4">2. Acceptable Use</h2>
+        <p>You agree not to:</p>
+        <ul>
+          <li>Post false or misleading job listings</li>
+          <li>Harass or spam other users</li>
+          <li>Attempt to hack or disrupt the platform</li>
+          <li>Use the site for illegal purposes</li>
+        </ul>
+
+        <h2 class="h4 mt-4">3. Job Listings</h2>
+        <p>Employers are solely responsible for the accuracy of job listings. DJobPortal is not a party to any employment relationship.</p>
+
+        <h2 class="h4 mt-4">4. Advertising</h2>
+        <p>We display third-party ads (including Google AdSense). We are not responsible for advertiser content.</p>
+
+        <h2 class="h4 mt-4">5. Termination</h2>
+        <p>We reserve the right to suspend or terminate accounts that violate these terms.</p>
+
+        <h2 class="h4 mt-4">6. Contact</h2>
+        <p>Questions? <a href="{% url 'jobapp:contact' %}">Contact us</a>.</p>
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock %}

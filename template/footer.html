@@ -1,0 +1,74 @@
+{% load static %}
+<footer class="site-footer">
+
+  <a href="#top" class="smoothscroll scroll-top">
+    <span class="icon-keyboard_arrow_up"></span>
+  </a>
+
+  <div class="container">
+    <div class="row mb-5">
+
+      <!-- ============ CATEGORY ============ -->
+<div class="col-6 col-md-3 mb-4 mb-md-0">
+  <h3>Category</h3>
+  <ul class="list-unstyled">
+    {% for cat in categories %}
+      <li><a href="{% url 'jobapp:job-list' %}?category={{ cat.name|urlencode }}">{{ cat.name }}</a></li>
+    {% empty %}
+      <li><a href="{% url 'jobapp:job-list' %}">All Jobs</a></li>
+    {% endfor %}
+  </ul>
+</div>
+
+      <!-- ============ COMPANY ============ -->
+      <div class="col-6 col-md-3 mb-4 mb-md-0">
+        <h3>Company</h3>
+        <ul class="list-unstyled">
+          <li><a href="{% url 'jobapp:about' %}">About Us</a></li>
+          <li><a href="{% url 'jobapp:career' %}">Career</a></li>
+          <li><a href="{% url 'jobapp:blog' %}">Blog</a></li>
+          <li><a href="{% url 'jobapp:resources' %}">Resources</a></li>
+        </ul>
+      </div>
+
+      <!-- ============ SUPPORT ============ -->
+      <div class="col-6 col-md-3 mb-4 mb-md-0">
+        <h3>Support</h3>
+        <ul class="list-unstyled">
+          <li><a href="{% url 'jobapp:support' %}">Support</a></li>
+          <li><a href="{% url 'jobapp:privacy' %}">Privacy</a></li>
+          <li><a href="{% url 'jobapp:terms' %}">Terms of Service</a></li>
+          <li><a href="{% url 'jobapp:contact' %}">Contact Us</a></li>
+        </ul>
+      </div>
+
+      <!-- ============ SOCIAL ============ -->
+      <div class="col-6 col-md-3 mb-4 mb-md-0">
+        <h3>Follow Us</h3>
+        <div class="footer-social">
+          <a href="https://facebook.com/" target="_blank" rel="noopener" aria-label="Facebook">
+            <span class="icon-facebook"></span>
+          </a>
+          <a href="https://twitter.com/" target="_blank" rel="noopener" aria-label="Twitter">
+            <span class="icon-twitter"></span>
+          </a>
+          <a href="https://instagram.com/" target="_blank" rel="noopener" aria-label="Instagram">
+            <span class="icon-instagram"></span>
+          </a>
+          <a href="https://linkedin.com/" target="_blank" rel="noopener" aria-label="LinkedIn">
+            <span class="icon-linkedin"></span>
+          </a>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="row text-center">
+      <div class="col-12">
+        <p class="copyright"><small>
+          Copyright &copy; {% now "Y" %} <a href="{% url 'jobapp:home' %}">AiJobAgent</a>. All rights reserved.
+        </small></p>
+      </div>
+    </div>
+  </div>
+</footer>

@@ -1,0 +1,34 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{% block meta_title %}DJobPortal &mdash; Find Your Job{% endblock %}</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="{% block meta_description %}DJobPortal is your one-stop destination for finding the perfect job or hiring the best talent. Discover thousands of job opportunities across various industries.{% endblock %}" />
+    <meta name="keywords" content="{% block meta_keywords %}job, portal, career, hiring, recruitment, job search, find job{% endblock %}" />
+    <link rel="icon" type="image/png" href="{% static 'images/favicon.png' %}" />
+
+    {% block extra_meta %}{% endblock %}
+
+    <!-- ============================================================
+         Google AdSense — single site-wide loader (must appear ONCE)
+         ============================================================ -->
+    <script async
+            src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3177210890825529"
+            crossorigin="anonymous"></script>
+    <meta name="google-adsense-account" content="ca-pub-3177210890825529">
+    <!-- ============================================================ -->
+
+    {% include 'head.html' %}
+</head>
+<body id="top">
+    {% include 'header.html' %}
+
+    {% block content %}{% endblock %}
+
+    {% include 'footer.html' %}
+    {% include 'scripts.html' %}
+    {% block extra_scripts %}{% endblock %}
+</body>
+</html>

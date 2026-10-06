@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block meta_title %}Careers at DJobPortal{% endblock %}
+{% block content %}
+<section class="site-section py-5">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-md-10">
+        <h1 class="mb-4">Careers at DJobPortal</h1>
+        <p class="lead">We're always looking for talented people to join our team. Check back soon for open roles.</p>
+        <p>In the meantime, explore <a href="{% url 'jobapp:job-list' %}">open jobs on our platform</a>.</p>
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock %}
